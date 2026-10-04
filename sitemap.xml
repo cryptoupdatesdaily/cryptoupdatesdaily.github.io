@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://cryptoupdatesdaily.github.io/</loc><lastmod>2026-10-03</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://cryptoupdatesdaily.github.io/</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://cryptoupdatesdaily.github.io/how-to-choose-a-network-for-stablecoins/</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptoupdatesdaily.github.io/three-checks-before-claiming-a-polygon-pos-withdrawal/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptoupdatesdaily.github.io/the-destination-network-is-part-of-the-swap/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptoupdatesdaily.github.io/budgeting-energy-for-a-tron-swap-starts-with-a-live-estimate/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -14,4 +15,5 @@
 <url><loc>https://cryptoupdatesdaily.github.io/archive/</loc><priority>0.3</priority></url>
 <url><loc>https://cryptoupdatesdaily.github.io/about/</loc><priority>0.3</priority></url>
 <url><loc>https://cryptoupdatesdaily.github.io/privacy/</loc><priority>0.3</priority></url>
+<url><loc>https://cryptoupdatesdaily.github.io/page/2/</loc><changefreq>weekly</changefreq><priority>0.2</priority></url>
 </urlset>
