@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polygon Bridge Burn Amounts and Ethereum Claims</title>
+<meta name="description" content="Polygon PoS withdrawals use a verified burn event to determine how much escrowed token can be claimed on Ethereum, with checkpoints adding time and proof steps.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why Polygon Bridge Claims Match the Burned Amount">
+<meta property="og:description" content="Polygon PoS withdrawals use a verified burn event to determine how much escrowed token can be claimed on Ethereum, with checkpoints adding time and proof steps.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/why-polygon-bridge-claims-match-the-burned-amount-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why Polygon Bridge Claims Match the Burned Amount"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Polygon Bridge Claims Match the Burned Amount">
+<meta name="twitter:description" content="Polygon PoS withdrawals use a verified burn event to determine how much escrowed token can be claimed on Ethereum, with checkpoints adding time and proof steps.">
+<meta property="article:published_time" content="2026-10-04T09:12:15+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/",
+      "name": "Polygon Bridge Burn Amounts and Ethereum Claims",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/#article",
+      "headline": "Why Polygon Bridge Claims Match the Burned Amount",
+      "isAccessibleForFree": true,
+      "description": "Polygon PoS withdrawals use a verified burn event to determine how much escrowed token can be claimed on Ethereum, with checkpoints adding time and proof steps.",
+      "datePublished": "2026-10-04T09:12:15+00:00",
+      "dateModified": "2026-10-04T09:12:15+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 898,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/why-polygon-bridge-claims-match-the-burned-amount-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/why-polygon-bridge-claims-match-the-burned-amount-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/why-polygon-bridge-claims-match-the-burned-amount-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why Polygon Bridge Claims Match the Burned Amount",
+          "item": "https://cryptoupdatesdaily.github.io/why-polygon-bridge-claims-match-the-burned-amount/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Why Polygon Bridge Claims Match the Burned Amount</h1>
+<p class="s09d4746">Polygon PoS withdrawals use a verified burn event to determine how much escrowed token can be claimed on Ethereum, with checkpoints adding time and proof steps.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-04T09:12:15+00:00">Oct 4, 2026</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/why-polygon-bridge-claims-match-the-burned-amount.jpg" alt="Why Polygon Bridge Claims Match the Burned Amount" width="1200" height="630">    <div class="sf9a9063"><p>On Polygon’s PoS bridge, the amount claimed on Ethereum is tied to the amount recorded when the Polygon token is burned. A withdrawal does not simply copy a wallet balance across chains: the bridge verifies a specific Polygon transaction, then uses its recorded transfer amount to release the corresponding asset held on Ethereum. That link between burn and claim is the accounting rule behind the match, while the checkpoint and claim steps explain why the return journey takes longer than a deposit.</p>
+
+<p>The distinction matters because “burned” and “claimed” describe separate events on separate networks. Polygon Support describes the standard route as locking tokens on Ethereum when they are deposited to Polygon, then burning the Polygon representation when they return. For a fuller explanation of the <a href="https://www.tumblr.com/perpetualstalkerelemental/829381319506182144/what-happens-to-a-token-when-it-crosses" rel="noopener">Polygon Bridge burn-and-claim process</a>, the key point is that the burn provides the evidence for the later release; it is not itself an Ethereum transaction.</p>
+
+<h2>Why does the Ethereum claim match the Polygon burn?</h2>
+
+<p>The claim matches because the bridge checks a proof of the burn transaction and processes the amount in its event data. Polygon’s proof-generation repository describes a withdrawal as two steps: burn the asset on Polygon, then submit an exit on Ethereum that verifies the burn. For a standard ERC-20 withdrawal, the relevant log is a <code>Transfer</code> event to the zero address; its amount is part of the transaction receipt used to build the proof.</p>
+
+<p>That proof connects the claim to a particular Polygon block and receipt. Polygon’s repository explains that the burn must be included in a block covered by a checkpoint submitted to Ethereum. Once that condition is met, the exit proof lets the Ethereum bridge contract check the event against the checkpoint before releasing funds. The amount is therefore not an estimate based on a user interface, a token price, or a wallet’s current balance. It is part of the on-chain record being proven.</p>
+
+<p>In the standard mapped-token route, an Ethereum deposit locks the original tokens and issues the corresponding representation on Polygon. On the return trip, burning that representation authorizes the release of the escrowed tokens. The amounts are intended to match in token units, though their dollar values can move while the withdrawal is pending. Gas costs are separate: they pay for the transactions and do not change the token amount recorded in the burn event.</p>
+
+<h2>What happens between burning and claiming?</h2>
+
+<p>After the burn, the withdrawal waits until the relevant Polygon block is covered by an Ethereum checkpoint. The proof-generation repository describes the next step as building an inclusion proof from the transaction receipt and the checkpoint that covers its block. The user then submits the exit on Ethereum, where the bridge verifies the proof and releases the asset.</p>
+
+<p>This sequence explains why seeing a successful Polygon transaction does not necessarily mean the Ethereum funds have arrived. The burn can be final on Polygon while the withdrawal still awaits a checkpoint or a separate claim transaction. Polygon Support’s explanation of the native bridge also distinguishes the burn from the later unlock on Ethereum.</p>
+
+<p>The practical checks follow from those stages:</p>
+
+<ul>
+<li>Confirm the source transaction is a withdrawal burn for the intended token and amount.</li>
+<li>Check whether the Polygon block is covered by a checkpoint; an uncheckpointed burn is not yet ready for the exit proof.</li>
+<li>Look for a successful Ethereum claim transaction before treating the withdrawal as complete.</li>
+<li>Compare token addresses and units on both networks, since a matching symbol alone does not establish that two tokens are the mapped pair.</li>
+</ul>
+
+<p>A displayed amount can also look different without changing the underlying claim. Tokens may use different decimal displays, and wallets may format small fractions or hide token balances until the relevant asset is visible. The useful comparison is between the token contract and amount in the Polygon burn record and the token released by the Ethereum claim, not between rounded screen values.</p>
+
+<h2>When might the amounts not match exactly?</h2>
+
+<p>The one-to-one explanation applies to the standard bridge route and correctly mapped tokens; it is not a rule that every cross-chain product must follow. Some alternative bridges use liquidity pools or relayers, which can deliver assets from reserves and may deduct a fee or quote a different receive amount. In those systems, the source action and destination payout are connected by that bridge’s own accounting and validation rules.</p>
+
+<p>Even within a lock-and-burn design, token behavior matters. A fee-on-transfer token, rebasing token, or custom contract can make the amount a bridge expects differ from the amount actually received or burned. A ChainSecurity assessment of Polygon’s PoS Portal notes the general risk that a bridge can record the requested transfer amount when a fee-on-transfer token delivers less. This is why support and mapping for the specific asset matter; the bridge’s standard accounting should not be assumed to handle every token design.</p>
+
+<p>For a typical withdrawal of a supported Polygon PoS asset, the burn record is the anchor: its verified amount determines the corresponding release, while the checkpoint and Ethereum claim provide the proof and execution. The trade-off is a slower, two-stage return compared with routes that pay out from liquidity, but the claim can be traced to a specific burn and checked against the bridge’s escrow. The next signals to watch are whether the burn is checkpointed, whether the exit transaction succeeds, and whether the released token contract and units match the source record.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/funding-one-liquidity-pool-from-two-chains/">Funding one liquidity pool from two chains</a></li><li class="s3d62fab"><a href="/why-source-chain-refunds-take-time/">Why Source-Chain Refunds Take Time</a></li><li class="s3d62fab"><a href="/a-destination-confirmation-is-one-step-in-a-cross-chain-transfer/">A Destination Confirmation Is One Step in a Cross-Chain Transfer</a></li><li class="s3d62fab"><a href="/how-to-choose-a-network-for-stablecoins/">How to Choose a Network for Stablecoins</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent coverage — not investment advice.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
