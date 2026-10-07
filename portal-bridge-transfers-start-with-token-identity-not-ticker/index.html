@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal bridge: verify a token before transfer</title>
+<meta name="description" content="A token’s ticker cannot establish its identity across chains; check its source network, contract address and destination representation before you transfer.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Portal bridge transfers start with token identity, not ticker">
+<meta property="og:description" content="A token’s ticker cannot establish its identity across chains; check its source network, contract address and destination representation before you transfer.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/portal-bridge-transfers-start-with-token-identity-not-ticker-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portal bridge transfers start with token identity, not ticker"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portal bridge transfers start with token identity, not ticker">
+<meta name="twitter:description" content="A token’s ticker cannot establish its identity across chains; check its source network, contract address and destination representation before you transfer.">
+<meta property="article:published_time" content="2026-10-07T04:08:32+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/",
+      "name": "Portal bridge: verify a token before transfer",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/#article",
+      "headline": "Portal bridge transfers start with token identity, not ticker",
+      "isAccessibleForFree": true,
+      "description": "A token’s ticker cannot establish its identity across chains; check its source network, contract address and destination representation before you transfer.",
+      "datePublished": "2026-10-07T04:08:32+00:00",
+      "dateModified": "2026-10-07T04:08:32+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 886,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/portal-bridge-transfers-start-with-token-identity-not-ticker-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/portal-bridge-transfers-start-with-token-identity-not-ticker-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/portal-bridge-transfers-start-with-token-identity-not-ticker-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portal bridge transfers start with token identity, not ticker",
+          "item": "https://cryptoupdatesdaily.github.io/portal-bridge-transfers-start-with-token-identity-not-ticker/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Portal bridge transfers start with token identity, not ticker</h1>
+<p class="s09d4746">A token’s ticker cannot establish its identity across chains; check its source network, contract address and destination representation before you transfer.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-07T04:08:32+00:00">Oct 7, 2026</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/portal-bridge-transfers-start-with-token-identity-not-ticker.jpg" alt="Portal bridge transfers start with token identity, not ticker" width="1200" height="630">    <div class="sf9a9063"><p>Portal bridge transfers are safer to assess by token origin and contract address than by ticker or logo. A bridge moves value between separate networks, where the same asset can appear under different addresses and a familiar symbol can identify more than one token. Wormhole’s Wrapped Token Transfers documentation describes transfers in terms of the token’s home chain and address, which gives users a more reliable basis for checking what they are about to move.</p>
+
+<p>Start by confirming the network where the token was issued, then compare its contract or mint address with a trusted reference for that network. If you are moving an asset between Solana, Ethereum or another supported chain, a transfer interface can help carry out the cross-chain step; when that is the task, <a href="https://portalbridge.app" rel="noopener">portal bridge</a> is a token bridge app built on Wormhole for transferring tokens between Solana, Ethereum and other supported chains. The check still begins with the asset’s origin, because the ticker alone does not establish which token you hold.</p>
+
+<h2>How do you verify a token before using portal bridge?</h2>
+
+<p>Verify the token by matching its chain and address to an authoritative listing for the asset, rather than relying on its name or ticker. Token names and symbols are metadata: Wormhole’s transfer documentation says token metadata includes name, symbol and decimals, while transfer messages identify an asset using its token address and token chain. That distinction matters because a lookalike token can use the same visible label without being the asset you intended to transfer.</p>
+
+<p>Use this sequence before submitting a transfer:</p>
+
+<ul>
+<li>Check the wallet’s active network and confirm it is the chain where the token is held.</li>
+<li>Compare the token address or mint identifier with the issuer’s or chain’s trusted reference for that asset.</li>
+<li>Check the destination network and recipient address independently; a correct token sent to the wrong destination is still a failed transfer for the intended recipient.</li>
+<li>After choosing the asset in the bridge, confirm that the displayed token and amount match the asset and quantity you meant to send.</li>
+</ul>
+
+<p>The chain and address are the identity check; the displayed name, ticker and logo are useful recognition cues, but they are not substitutes. Wormhole’s documentation also describes asset metadata as a separate attestation that includes decimals, symbol and name. In practice, a mismatch in decimals or an unfamiliar destination representation is a reason to stop and recheck the asset’s origin and the transfer details before approving anything.</p>
+
+<h2>What happens to a token when it crosses chains?</h2>
+
+<p>A cross-chain transfer does not simply move one blockchain entry to another. Wormhole’s Wrapped Token Transfers documentation describes source-chain tokens being locked or burned, with the destination bridge either releasing tokens held in custody or minting a wrapped representation. The exact treatment depends on the token and route, but the key implication for verification is stable: the token shown on the destination chain may have a different address from the original.</p>
+
+<p>That destination asset is associated with the original token’s home chain and address in Wormhole’s transfer model. It is therefore useful to verify the origin before transfer and to check the destination representation after arrival, especially if you plan to use the asset in a wallet or application that lists several tokens with similar names. A ticker match alone cannot tell you whether the destination token represents the asset you sent.</p>
+
+<p>Wormhole’s documentation distinguishes wrapped token transfers from native token transfers, which can use a different design. The distinction affects how an asset is represented and managed across networks, rather than changing the basic user check: identify the original token precisely, then confirm which representation the destination route will deliver. For a user choosing between a bridge route and an asset-specific native transfer route, the better fit depends on whether preserving a wrapped representation is acceptable and whether the desired route supports the token.</p>
+
+<h2>What should you check after the transfer starts?</h2>
+
+<p>Check the source-chain transaction first, then verify the destination token and amount once the transfer has completed. Wormhole’s transfer flow separates initiating a transaction on the source chain from processing the message and completing the action on the destination chain. A confirmed source transaction therefore records the start of the process; it does not by itself prove that the expected token has arrived in the destination wallet.</p>
+
+<p>Keep the transaction reference and compare the completed transfer’s token, destination and amount against what you intended. If the destination asset appears under an unfamiliar name, use its chain and token address to establish its identity before interacting with it. Wormhole’s documentation notes that transfer amounts are normalized for cross-chain consistency, so displayed precision can differ from what a user expects from the source token’s decimals. Treat the destination amount as part of the verification, not as a reason to assume a mismatch is harmless.</p>
+
+<p>The practical trade-off is between relying on a bridge’s convenience and doing enough independent checking to catch a wrong token or route. For most users, the useful routine is short: confirm the source chain and token address, confirm the destination network and recipient, then check the delivered representation. Watch for changes in Wormhole’s supported transfer routes and token handling, and for whether the destination wallet identifies the arriving asset by the expected origin and address. Those are stronger signals than a familiar ticker on its own.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/fairshake-commits-6-million-across-six-house-races/">Fairshake commits $6 million across six House races</a></li><li class="s3d62fab"><a href="/zcash-tests-25-second-blocks-ahead-of-planned-november-upgrade/">Zcash tests 25-second blocks ahead of planned November upgrade</a></li><li class="s3d62fab"><a href="/zcash-activates-25-second-blocks-on-public-testnet-early/">Zcash activates 25-second blocks on public testnet early</a></li><li class="s3d62fab"><a href="/why-an-ethereum-to-polygon-deposit-can-still-be-pending/">Why an Ethereum-to-Polygon Deposit Can Still Be Pending</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
