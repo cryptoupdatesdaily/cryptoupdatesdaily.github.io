@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XRP Ledger Bug Fix: How the 18 Trillion XRP Flaw Worked</title>
+<meta name="description" content="XRPL’s 3.4.1 release closed an overflow flaw that could have created spendable XRP; its emergency rollout traded the usual validator vote for faster protection.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="XRP Ledger fixes overflow flaw that could mint 18 trillion XRP">
+<meta property="og:description" content="XRPL’s 3.4.1 release closed an overflow flaw that could have created spendable XRP; its emergency rollout traded the usual validator vote for faster protection.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="XRP Ledger fixes overflow flaw that could mint 18 trillion XRP"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="XRP Ledger fixes overflow flaw that could mint 18 trillion XRP">
+<meta name="twitter:description" content="XRPL’s 3.4.1 release closed an overflow flaw that could have created spendable XRP; its emergency rollout traded the usual validator vote for faster protection.">
+<meta property="article:published_time" content="2026-10-13T12:33:18+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/",
+      "name": "XRP Ledger Bug Fix: How the 18 Trillion XRP Flaw Worked",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/#article",
+      "headline": "XRP Ledger fixes overflow flaw that could mint 18 trillion XRP",
+      "isAccessibleForFree": true,
+      "description": "XRPL’s 3.4.1 release closed an overflow flaw that could have created spendable XRP; its emergency rollout traded the usual validator vote for faster protection.",
+      "datePublished": "2026-10-13T12:33:18+00:00",
+      "dateModified": "2026-10-13T12:33:18+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 599,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "XRP Ledger fixes overflow flaw that could mint 18 trillion XRP",
+          "item": "https://cryptoupdatesdaily.github.io/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">XRP Ledger fixes overflow flaw that could mint 18 trillion XRP</h1>
+<p class="s09d4746">XRPL’s 3.4.1 release closed an overflow flaw that could have created spendable XRP; its emergency rollout traded the usual validator vote for faster protection.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-13T12:33:18+00:00">Oct 13, 2026 · 12:33 UTC</time><span>3 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/xrp-ledger-fixes-overflow-flaw-that-could-mint-18-trillion-xrp.jpg" alt="XRP Ledger fixes overflow flaw that could mint 18 trillion XRP" width="1200" height="630">    <div class="sf9a9063"><p>RippleX fixed a decade-old XRP Ledger payment-engine flaw in software released Sept. 25, closing a route that could have created spendable XRP beyond the ledger’s 100 billion supply. The <a href="https://xrpl.org/es-es/blog/2026/vulnerabilitydisclosurereport-bug-20261009" rel="nofollow noopener">XRPL Foundation’s vulnerability disclosure report</a> says it found no evidence the flaw was exploited on a public network.</p>
+
+<p>The bug was in how the engine added up XRP owed across offers in the ledger’s built-in exchange. A sum larger than a 64-bit integer could wrap around to a small number: sellers would receive the full amounts listed, while the buyer was charged only the smaller total. The report says a second “no XRP created” check used similarly vulnerable arithmetic and could also miss the difference.</p>
+
+<h2>How much XRP could one transaction have created?</h2>
+
+<p>A proof of concept demonstrated that the newly created XRP could be spent in a later transaction. The Block reported that Veria Labs co-founder Cayden Liao estimated one exploit transaction could have created about 18 trillion XRP, roughly 184 times the original 100 billion supply. That is an estimate of the exploit’s potential, not a report of XRP actually minted.</p>
+
+<p>The attack required a few hundred accounts, each offering a tiny amount of another token for an unusually large amount of XRP, followed by a payment that consumed all those offers. The attacker could control the accounts and needed only a few hundred XRP in reserves, which the report says would be returned when the accounts and offers were removed, plus transaction fees.</p>
+
+<p>The amounts were deliberately implausible for real trading. The offers would sit below real liquidity in the order book, and the report says ordinary payments would clear before reaching them. This was a constructed route to bypass the supply protections, rather than a way for routine trades to create XRP by accident.</p>
+
+<h2>Why did the fix skip the validator amendment process?</h2>
+
+<p>XRPL transaction-rule changes normally take effect through an amendment: more than 80% of trusted validators must support a change for two weeks. This fix instead took effect on each server when it upgraded to version 3.4.1, a first for a transaction-processing change since the amendment system began, according to the disclosure.</p>
+
+<p>The trade-off was speed against consistency during the upgrade. A normal public release could have revealed the flaw weeks before an amendment activated, leaving it exploitable while operators upgraded and validators voted. But servers on different versions process the affected payment differently; the report says that could have caused ledger disagreement or, in the worst case, a network halt.</p>
+
+<p>RippleX’s fix makes the payment fail cleanly if the offer total would overflow, and uses a wider counter for the “no XRP created” check. More than 80% of default Unique Node List validators were on version 3.4.1 or later on release day, the report says. Operators still had to upgrade to remain in sync, and the release also included a separate Batch vulnerability fix that later activated through an amendment.</p>
+
+<h2>What should XRPL users watch next?</h2>
+
+<p>The disclosure says the XRP overflow fix applies immediately on upgrade, while the separate Batch fix activated on Mainnet through the <code>fixBatchV1_2</code> amendment on Oct. 9. The report says older servers can no longer stay in sync after that activation. A practical signal to watch is whether remaining operators upgrade and the network continues to reach consensus through future releases.</p>
+
+<p>XRPL’s team also says it plans to re-test security findings against release candidates before closing them as fixed. That safeguard, and the continued use of amendments for ordinary transaction-rule changes, will show how the ledger balances faster vulnerability response with coordinated rule changes after this exceptional patch.</p>
+<h2>Sources and documents</h2>
+<ul><li><a href="https://xrpl.org/es-es/blog/2026/vulnerabilitydisclosurereport-bug-20261009" rel="nofollow noopener">XRPL Foundation’s vulnerability disclosure report</a> — xrpl.org</li></ul></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/gsr-commits-100-million-to-launch-onchain-credit-vaults/">GSR commits $100 million to launch onchain credit vaults</a></li><li class="s3d62fab"><a href="/cardano-spins-out-veridian-with-tokenized-shares/">Cardano spins out Veridian with tokenized shares</a></li><li class="s3d62fab"><a href="/fairshake-backs-32-house-candidates-as-crypto-bill-stalls-2/">Fairshake backs 32 House candidates as crypto bill stalls</a></li><li class="s3d62fab"><a href="/samsung-to-add-usdc-transfers-to-wallet-in-late-october/">Samsung to Add USDC Transfers to Wallet in Late October</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
