@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safely Send a Swap to a New Treasury Address</title>
+<meta name="description" content="A treasury address change affects where swap proceeds arrive, so verify the network, recipient and quote before signing, then confirm settlement on-chain.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="A Treasury Address Change Should Start With the Swap’s Recipient">
+<meta property="og:description" content="A treasury address change affects where swap proceeds arrive, so verify the network, recipient and quote before signing, then confirm settlement on-chain.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/a-treasury-address-change-should-start-with-the-swaps-recipient-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A Treasury Address Change Should Start With the Swap’s Recipient"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Treasury Address Change Should Start With the Swap’s Recipient">
+<meta name="twitter:description" content="A treasury address change affects where swap proceeds arrive, so verify the network, recipient and quote before signing, then confirm settlement on-chain.">
+<meta property="article:published_time" content="2026-10-16T18:55:15+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/",
+      "name": "Safely Send a Swap to a New Treasury Address",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/#article",
+      "headline": "A Treasury Address Change Should Start With the Swap’s Recipient",
+      "isAccessibleForFree": true,
+      "description": "A treasury address change affects where swap proceeds arrive, so verify the network, recipient and quote before signing, then confirm settlement on-chain.",
+      "datePublished": "2026-10-16T18:55:15+00:00",
+      "dateModified": "2026-10-16T18:55:15+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 943,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/a-treasury-address-change-should-start-with-the-swaps-recipient-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/a-treasury-address-change-should-start-with-the-swaps-recipient-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/a-treasury-address-change-should-start-with-the-swaps-recipient-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "A Treasury Address Change Should Start With the Swap’s Recipient",
+          "item": "https://cryptoupdatesdaily.github.io/a-treasury-address-change-should-start-with-the-swaps-recipient/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">A Treasury Address Change Should Start With the Swap’s Recipient</h1>
+<p class="s09d4746">A treasury address change affects where swap proceeds arrive, so verify the network, recipient and quote before signing, then confirm settlement on-chain.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-16T18:55:15+00:00">Oct 16, 2026 · 18:55 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/a-treasury-address-change-should-start-with-the-swaps-recipient.jpg" alt="A Treasury Address Change Should Start With the Swap’s Recipient" width="1200" height="630">    <div class="sf9a9063"><p>Sending a swap to a new treasury address safely starts with checking the swap’s recipient field before signing, because the address that receives the output can differ from the wallet that supplies the input. A treasury change therefore affects more than an address book entry: the transaction may still spend from the usual wallet while delivering tokens somewhere new. MetaMask’s send guidance makes the same practical distinction in its Send &amp; Swap flow, which asks users to select a recipient and then review the quote. Treat the new destination as a change to verify at the transaction level, not just a label to update.</p>
+
+<h2>What changes when a swap uses a new treasury address?</h2>
+
+<p>The source wallet, swap route and destination are separate parts of the instruction. The source wallet holds the token being sold and may need to approve a contract to spend it. The route describes how the swap is executed. The recipient field determines where the output is sent. A new treasury address changes the last part, while the other two may stay the same.</p>
+
+<p>That distinction matters because the familiar wallet address shown at the top of a swap page may be the sender, not the recipient. Before approving or signing, check the wallet connection, network, token pair, amount, recipient and minimum output shown by the interface. If the swap crosses chains, check the destination network and address format as well; a valid-looking address on one network does not establish that it is the right treasury destination on another.</p>
+
+<p>A route comparison can help explain why quotes differ, but it does not validate the recipient. For route mechanics, this <a href="https://dailynewscrypto.github.io/paraswap-how-to-choose-a-cross-chain-swap-route/" rel="noopener">guide to comparing ParaSwap cross-chain routes</a> covers the detail that a destination check only touches briefly. Keep those decisions separate: route quality is about the execution path, while treasury verification is about who receives the output.</p>
+
+<h2>How should a treasury address be checked before signing?</h2>
+
+<p>Verify the address through a channel independent of the change notice, then compare it character by character with the recipient field in the wallet or swap interface. If the organization publishes an approved address list or change procedure, check the destination against that record. A copied address can be altered or confused with a similar one, so a familiar name or recent-transaction list is not enough on its own. MetaMask advises checking the recipient carefully and confirming that the receiving account supports the token being sent.</p>
+
+<p>Before signing, use a short checklist:</p>
+
+<ul>
+<li>Confirm the source wallet and the network where the input token is held.</li>
+<li>Compare the full recipient address against the treasury’s independently verified record.</li>
+<li>Review the output token, estimated amount, minimum received and any displayed destination network.</li>
+<li>Read each wallet prompt: distinguish a token allowance from the swap transaction, and check which contract the allowance names.</li>
+</ul>
+
+<p>That last step matters for many token swaps. On Ethereum-style tokens, an allowance gives a contract permission to spend tokens from the wallet; it is not the same instruction as sending the swap output to the treasury. Ethereum.org’s token-access guide explains that approvals can remain usable until revoked, and that unlimited allowances carry more exposure than approving only what is needed. A change in treasury destination does not automatically mean an old allowance should be reused or expanded: check the spender and amount the wallet asks you to authorize.</p>
+
+<h2>Is one swap better than swapping and transferring separately?</h2>
+
+<p>A direct swap to the treasury can combine the exchange and delivery into one flow, where the service supports a separate recipient field. That may save a separate transfer step and its network fee, but it leaves fewer checkpoints between the swap and delivery. The user must be confident that the recipient is correct before signing, and that the displayed quote accounts for the requested destination and network.</p>
+
+<p>The alternative is to swap into the source wallet first, confirm the received asset, and then send it to the treasury in a separate transaction. This adds a transaction and can add another fee, but it creates a clear pause to verify the output before moving it. MetaMask’s documentation describes this as the distinction between using Send &amp; Swap and first swapping, then sending; the latter takes more steps. For a one-off treasury change or a destination that has not yet been tested, the separate transfer is often easier to audit. For a well-established process with a checked recipient, a direct swap can be more efficient.</p>
+
+<h2>What should happen after the swap is submitted?</h2>
+
+<p>Submission is not settlement. Check the transaction status in the wallet and use the relevant network’s block explorer to confirm the transaction completed and the output reached the intended address. MetaMask’s transaction guidance distinguishes a pending submission from a confirmed transaction and points users to block explorers for transaction records. For a cross-chain swap, check both the source-side transaction and the destination-side delivery according to the service’s status page; the two sides may not complete at the same moment.</p>
+
+<p>If the transaction remains pending, avoid submitting a duplicate swap until its status is clear. If the interface supports cancellation or replacement, review the wallet’s transaction details before using those options. If the recipient was wrong and the transaction has confirmed, an on-chain transfer generally cannot be reversed by the sender; Ethereum.org’s scam guidance warns that confirmed blockchain transactions have no reversal mechanism. That makes pre-signing verification the decisive control.</p>
+
+<p>For the next treasury change, watch three signals: whether the approved destination record has changed, whether the swap interface displays a distinct recipient and destination network, and whether the explorer confirms the output at the expected address. Those checks show whether the operational change reached the transaction itself.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/budgeting-treasury-transfers-across-chains/">Budgeting Treasury Transfers Across Chains</a></li><li class="s3d62fab"><a href="/moving-crypto-without-losing-staking-eligibility/">Moving Crypto Without Losing Staking Eligibility</a></li><li class="s3d62fab"><a href="/bridge-limits-can-change-the-cost-of-a-large-crypto-swap/">Bridge limits can change the cost of a large crypto swap</a></li><li class="s3d62fab"><a href="/why-your-btc-to-eth-swap-is-waiting-on-bitcoin/">Why Your BTC-to-ETH Swap Is Waiting on Bitcoin</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
