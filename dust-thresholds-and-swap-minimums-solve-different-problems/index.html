@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dust threshold vs swap minimum for crypto deposits</title>
+<meta name="description" content="A dust threshold determines whether a chain or route can process a deposit; a swap minimum tests whether its value can cover fees and still produce useful output.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Dust thresholds and swap minimums solve different problems">
+<meta property="og:description" content="A dust threshold determines whether a chain or route can process a deposit; a swap minimum tests whether its value can cover fees and still produce useful output.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/dust-thresholds-and-swap-minimums-solve-different-problems-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dust thresholds and swap minimums solve different problems"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dust thresholds and swap minimums solve different problems">
+<meta name="twitter:description" content="A dust threshold determines whether a chain or route can process a deposit; a swap minimum tests whether its value can cover fees and still produce useful output.">
+<meta property="article:published_time" content="2026-10-16T20:34:05+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/",
+      "name": "Dust threshold vs swap minimum for crypto deposits",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/#article",
+      "headline": "Dust thresholds and swap minimums solve different problems",
+      "isAccessibleForFree": true,
+      "description": "A dust threshold determines whether a chain or route can process a deposit; a swap minimum tests whether its value can cover fees and still produce useful output.",
+      "datePublished": "2026-10-16T20:34:05+00:00",
+      "dateModified": "2026-10-16T20:34:05+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 993,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/dust-thresholds-and-swap-minimums-solve-different-problems-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/dust-thresholds-and-swap-minimums-solve-different-problems-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/dust-thresholds-and-swap-minimums-solve-different-problems-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dust thresholds and swap minimums solve different problems",
+          "item": "https://cryptoupdatesdaily.github.io/dust-thresholds-and-swap-minimums-solve-different-problems/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Dust thresholds and swap minimums solve different problems</h1>
+<p class="s09d4746">A dust threshold determines whether a chain or route can process a deposit; a swap minimum tests whether its value can cover fees and still produce useful output.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-16T20:34:05+00:00">Oct 16, 2026 · 20:34 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/dust-thresholds-and-swap-minimums-solve-different-problems.jpg" alt="Dust thresholds and swap minimums solve different problems" width="1200" height="630">    <div class="sf9a9063"><p>A deposit can clear a chain’s dust threshold and still be too small to swap economically. The distinction matters because the first limit is about whether a transaction or inbound amount can be recognised and processed; the second is about whether the resulting trade can cover its costs. Treating them as one cutoff can leave users with deposits that reach a route but cannot complete the intended swap.</p>
+
+<p>For a cross-chain route, there are several separate steps: sending the asset, having the source chain and route recognise the deposit, executing the swap, and paying to send the output or a refund. THORChain’s developer documentation describes both a dust-threshold error, where an inbound amount is too small to be observed, and a minimum-swap error, where the amount cannot cover fees. The distinction is useful beyond one protocol: “processable” and “worth processing” are different tests.</p>
+
+<p>A route-check guide on <a href="https://dev.to/jake-eth/thor-swap-route-checks-before-choosing-a-destination-chain-215n" rel="noopener">thor swap</a> covers the destination-chain choice in more detail; the same route-first thinking applies to amount limits. A quote should be checked for the selected source and destination, since the route determines which network costs and output conditions matter.</p>
+
+<h2>What does a dust threshold mean for a crypto deposit?</h2>
+
+<p>A dust threshold marks an amount that a chain or route will not accept or observe as a usable inbound transaction. Its purpose depends on the chain’s transaction model and the route’s own processing rules. On Bitcoin, for example, Bitcoin Core defines dust in relay policy by comparing an output’s value with the estimated cost to spend it; the threshold depends on the output type and fee policy. That is a network-policy concept, not a universal dollar value shared by every coin.</p>
+
+<p>For an integrator, the practical question is whether the intended deposit can be detected and attributed by the route. The THORChain Swap Guide documents an error for amounts below the inbound chain’s dust threshold and says those transactions will not be observed. If an interface accepts an amount below that boundary and generates deposit instructions anyway, the user may pay the source-chain transaction fee without creating a deposit the route can process.</p>
+
+<p>Dust is not the same as “small balance” in a wallet. A balance can be visible and transferable in one context but unusable for a particular route because the route uses a stricter threshold, a different asset representation, or a chain-specific minimum. The relevant amount is therefore the amount being sent to the route, in the asset’s native units, not a general portfolio value.</p>
+
+<h2>How is a swap minimum different from dust?</h2>
+
+<p>A swap minimum asks whether the deposit can cover the costs of carrying out the requested trade. Those costs can include the source-chain transaction, the pool’s liquidity or slip fee, any optional affiliate fee, and the destination-chain outbound fee. THORChain’s fee documentation separates these charges, while its developer guide explains that the recommended minimum is based on the fees relevant to the requested route.</p>
+
+<p>Unlike dust, this minimum can change with the route and current network conditions. A destination chain with more expensive outbound transactions can make a small swap uneconomic even when the source deposit is clearly above its dust threshold. Pool depth and trade size also affect the output through liquidity costs. In THORChain’s quote flow, the <code>recommended_min_amount_in</code> is a route-specific estimate intended to help avoid amounts that are insufficient to pay fees; the guide advises a buffer because fees can move.</p>
+
+<p>That is why a single static “minimum deposit” can mislead. It may be a conservative product rule, but it is not necessarily the dust threshold, nor does it guarantee a positive or acceptable output. The swap quote is the better test for economic feasibility, while the dust check is a prerequisite for technical processability.</p>
+
+<h2>How should a deposit flow check both limits?</h2>
+
+<p>Check the chain threshold first, then compare the amount with a fresh quote for the exact route. The first check prevents an unobservable deposit; the second determines whether fees and expected output make the swap viable. A useful flow keeps these results distinct in both its logic and its explanation to the user.</p>
+
+<ul>
+<li><strong>Validate the inbound amount.</strong> Use the source chain’s and route’s current dust or minimum-observation rule, with correct decimal conversion and rounding.</li>
+<li><strong>Request a route-specific quote.</strong> Include the chosen destination, asset and relevant output constraints; use the quote’s fee breakdown and recommended minimum where available.</li>
+<li><strong>Refresh before sending.</strong> A displayed quote can expire or become stale as gas prices, pool conditions and route availability change.</li>
+<li><strong>Explain the failure point.</strong> Say whether the amount is too small to be observed or too small to cover the trade’s costs, and avoid presenting either condition as a universal token minimum.</li>
+</ul>
+
+<p>The trade-off is between rejecting too much and accepting amounts that cannot finish. A high fixed minimum is simple and can provide a buffer, but it excludes deposits that might work on cheaper routes. A low fixed minimum admits more users, but risks deposits reaching a route that later refunds or fails. A live quote paired with a separate inbound threshold gives a more precise answer, at the cost of requiring route data to be refreshed and interpreted correctly.</p>
+
+<h2>What should users and operators watch next?</h2>
+
+<p>Users should compare the amount they plan to send with both the inbound threshold and the current route quote, rather than assuming that a successful wallet transfer means the swap is viable. Operators should watch changes to chain dust policy, route availability, outbound fees and quote recommendations, then make sure interface limits track those changes. THORChain’s documentation notes that fee parameters can be adjusted, and its quote endpoint is designed to return current route details.</p>
+
+<p>The practical rule is simple: dust answers whether the deposit can enter the process; the swap minimum answers whether the route can afford to complete it. Keep both checks visible, refresh the quote at the point of action, and the user is less likely to confuse a technically accepted deposit with an economically workable swap.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/a-treasury-address-change-should-start-with-the-swaps-recipient/">A Treasury Address Change Should Start With the Swap’s Recipient</a></li><li class="s3d62fab"><a href="/budgeting-treasury-transfers-across-chains/">Budgeting Treasury Transfers Across Chains</a></li><li class="s3d62fab"><a href="/moving-crypto-without-losing-staking-eligibility/">Moving Crypto Without Losing Staking Eligibility</a></li><li class="s3d62fab"><a href="/bridge-limits-can-change-the-cost-of-a-large-crypto-swap/">Bridge limits can change the cost of a large crypto swap</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
