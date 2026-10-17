@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Deposit Monero Into an ERC-20 Exchange</title>
+<meta name="description" content="Monero cannot be sent to an ERC-20 address; the route depends on whether an exchange accepts native XMR or requires a separate conversion before Ethereum withdrawal.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Depositing Monero to an ERC-20 Exchange Takes Two Steps">
+<meta property="og:description" content="Monero cannot be sent to an ERC-20 address; the route depends on whether an exchange accepts native XMR or requires a separate conversion before Ethereum withdrawal.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/depositing-monero-to-an-erc-20-exchange-takes-two-steps-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Depositing Monero to an ERC-20 Exchange Takes Two Steps"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Depositing Monero to an ERC-20 Exchange Takes Two Steps">
+<meta name="twitter:description" content="Monero cannot be sent to an ERC-20 address; the route depends on whether an exchange accepts native XMR or requires a separate conversion before Ethereum withdrawal.">
+<meta property="article:published_time" content="2026-10-17T03:52:33+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/",
+      "name": "How to Deposit Monero Into an ERC-20 Exchange",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/#article",
+      "headline": "Depositing Monero to an ERC-20 Exchange Takes Two Steps",
+      "isAccessibleForFree": true,
+      "description": "Monero cannot be sent to an ERC-20 address; the route depends on whether an exchange accepts native XMR or requires a separate conversion before Ethereum withdrawal.",
+      "datePublished": "2026-10-17T03:52:33+00:00",
+      "dateModified": "2026-10-17T03:52:33+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 977,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/depositing-monero-to-an-erc-20-exchange-takes-two-steps-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/depositing-monero-to-an-erc-20-exchange-takes-two-steps-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/depositing-monero-to-an-erc-20-exchange-takes-two-steps-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Depositing Monero to an ERC-20 Exchange Takes Two Steps",
+          "item": "https://cryptoupdatesdaily.github.io/depositing-monero-to-an-erc-20-exchange-takes-two-steps/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Depositing Monero to an ERC-20 Exchange Takes Two Steps</h1>
+<p class="s09d4746">Monero cannot be sent to an ERC-20 address; the route depends on whether an exchange accepts native XMR or requires a separate conversion before Ethereum withdrawal.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-17T03:52:33+00:00">Oct 17, 2026 · 03:52 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/depositing-monero-to-an-erc-20-exchange-takes-two-steps.jpg" alt="Depositing Monero to an ERC-20 Exchange Takes Two Steps" width="1200" height="630">    <div class="sf9a9063"><p>You can deposit Monero into an exchange that supports XMR, then trade it for an Ethereum token; you cannot send XMR directly to an ERC-20 deposit address. Monero and Ethereum use separate networks, with different address formats and transaction rules. The practical route depends on whether the exchange accepts native Monero deposits or whether you need to convert XMR elsewhere first.</p>
+
+<h2>Can you send Monero to an ERC-20 address?</h2>
+<p>No: an ERC-20 address is for assets tracked by a token contract on Ethereum, while XMR moves on the Monero network. Ethereum’s ERC-20 standard describes how fungible tokens operate within Ethereum smart contracts; it does not make those tokens compatible with Monero. An address that looks valid on one network does not become a destination for assets on another.</p>
+<p>That distinction matters because a deposit screen may list several networks or tokens with similar names. Choose the exchange’s XMR deposit option and use the Monero address and any payment details it provides. Do not paste an Ethereum address into a Monero wallet, or send XMR using an Ethereum network option. Monero’s official documentation describes receiving XMR through a Monero address, including subaddresses and, in some services, integrated addresses.</p>
+<p>Some exchanges assign a separate Monero address to each account; others may provide an integrated address or additional instructions. The address and any required payment ID are part of the exchange’s deposit instructions, not details to guess or reuse from another asset. For a closer look at the route’s pricing and settlement trade-offs, see this <a href="https://dailyblockchainnews.github.io/monero-bridge-spreads-limits-and-settlement-in-2026/" rel="noopener">2026 analysis of monero bridge spreads, limits and settlement</a>. Those factors become more relevant when native XMR deposits are unavailable and a separate conversion is needed.</p>
+
+<h2>How do you deposit XMR when the exchange supports Monero?</h2>
+<p>Use the exchange’s own XMR deposit page to generate the destination, then send XMR from a wallet that holds Monero. A platform’s support for ERC-20 assets does not by itself establish that it supports XMR: check that XMR deposits are enabled for your account and region, and read the current instructions before transferring.</p>
+<ul>
+<li>Open the exchange’s XMR deposit page and confirm that deposits are active.</li>
+<li>Copy the provided Monero address and any required payment ID or other identifier exactly.</li>
+<li>In your Monero wallet, paste the destination, enter an amount that meets the exchange’s stated minimum, and review the details.</li>
+<li>For a first transfer, consider a small test amount; after the exchange credits it, send the remainder if needed.</li>
+</ul>
+<p>Monero’s official wallet guide says a sent transaction is irreversible once confirmed, so check the destination before sending. The wallet shows whether the transaction is pending or confirmed; the exchange may wait for its own required number of confirmations before crediting the deposit. A transaction can therefore appear on the Monero network before the exchange balance updates. Keep the transaction ID and deposit record in case support needs them, but remember that Monero transactions do not publicly show the sender, recipient and amount in the same way a transparent-chain transfer does.</p>
+<p>An exchange may also ask for a payment identifier to match an incoming transaction to your account. Use only the identifier shown in the current deposit instructions. Monero’s documentation distinguishes integrated addresses, which embed a payment ID, from ordinary addresses; the exchange’s instructions determine which form it expects. If the deposit page gives no separate ID, do not invent one.</p>
+
+<h2>What if the exchange does not accept XMR?</h2>
+<p>If XMR deposits are disabled or unsupported, you need a conversion step before the funds can reach an Ethereum token deposit. A route may involve swapping XMR for an asset the exchange accepts, then depositing that asset on its supported network; alternatively, a service may convert XMR into an Ethereum-based token for withdrawal to a compatible address. The exact steps, supported assets and networks vary by provider, so follow the route’s instructions from start to finish.</p>
+<p>That convenience comes with trade-offs. A conversion route can involve a quoted exchange rate, fees, minimums, limits and a settlement delay, as well as reliance on the service to complete the swap and send the output. The displayed rate may differ from the final amount received if the quote expires or market conditions move. Compare the expected amount after fees and check what happens if a transaction is delayed or falls below the recipient’s minimum.</p>
+<p>With a direct XMR deposit, the exchange credits the XMR balance after processing the Monero transaction; you can then trade within the platform for an ERC-20 asset and withdraw it using the network the receiving wallet supports. That keeps conversion inside one exchange account, but depends on XMR deposits and trading being available there. If converting outside the exchange, the intermediary adds another operational step and another party to rely on.</p>
+<p>Before sending, confirm the exact asset, network, destination address, required identifier, minimum deposit and status of deposits. For an Ethereum withdrawal, check that the destination accepts the chosen token on the selected network; token names alone are not enough to establish compatibility. A small test transfer can reduce the cost of a copying or network-selection mistake, though it does not remove exchange or intermediary risk.</p>
+
+<h2>Which route is better for most users?</h2>
+<p>When the exchange accepts native XMR deposits, depositing XMR there and trading to the desired Ethereum token is usually the simpler route: it avoids an external conversion step and its separate quote and settlement process. That is only practical if deposits, trading and withdrawals are available to your account. If they are not, use a conversion route only after checking its net output, limits and status process, rather than assuming that an ERC-20 deposit page can receive XMR.</p>
+<p>Watch for changes to XMR deposit availability, exchange minimums and confirmation requirements, along with the conversion route’s quoted spread, limits and settlement times. Those details determine whether the direct deposit path remains available and what the alternative will cost.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/why-bridges-deduct-gas-from-the-tokens-you-receive/">Why bridges deduct gas from the tokens you receive</a></li><li class="s3d62fab"><a href="/why-destination-chain-gas-can-reduce-your-crypto-transfer/">Why Destination-Chain Gas Can Reduce Your Crypto Transfer</a></li><li class="s3d62fab"><a href="/why-cross-chain-swap-minimums-need-a-treasury-policy/">Why Cross-Chain Swap Minimums Need a Treasury Policy</a></li><li class="s3d62fab"><a href="/asic-sets-draft-rules-for-australian-crypto-platforms/">ASIC sets draft rules for Australian crypto platforms</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
