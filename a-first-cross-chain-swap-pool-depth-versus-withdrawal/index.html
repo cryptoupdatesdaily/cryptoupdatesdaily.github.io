@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THORChain Swap Capacity vs Pool Withdrawals</title>
+<meta name="description" content="A first THORChain swap uses two RUNE-linked pools, while a withdrawal returns an LP share; pool depth, slippage and chain fees shape the practical choice.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="A First Cross-Chain Swap: Pool Depth Versus Withdrawal">
+<meta property="og:description" content="A first THORChain swap uses two RUNE-linked pools, while a withdrawal returns an LP share; pool depth, slippage and chain fees shape the practical choice.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/a-first-cross-chain-swap-pool-depth-versus-withdrawal-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A First Cross-Chain Swap: Pool Depth Versus Withdrawal"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A First Cross-Chain Swap: Pool Depth Versus Withdrawal">
+<meta name="twitter:description" content="A first THORChain swap uses two RUNE-linked pools, while a withdrawal returns an LP share; pool depth, slippage and chain fees shape the practical choice.">
+<meta property="article:published_time" content="2026-10-17T07:05:11+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/",
+      "name": "THORChain Swap Capacity vs Pool Withdrawals",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/#article",
+      "headline": "A First Cross-Chain Swap: Pool Depth Versus Withdrawal",
+      "isAccessibleForFree": true,
+      "description": "A first THORChain swap uses two RUNE-linked pools, while a withdrawal returns an LP share; pool depth, slippage and chain fees shape the practical choice.",
+      "datePublished": "2026-10-17T07:05:11+00:00",
+      "dateModified": "2026-10-17T07:05:11+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 926,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/a-first-cross-chain-swap-pool-depth-versus-withdrawal-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/a-first-cross-chain-swap-pool-depth-versus-withdrawal-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/a-first-cross-chain-swap-pool-depth-versus-withdrawal-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "A First Cross-Chain Swap: Pool Depth Versus Withdrawal",
+          "item": "https://cryptoupdatesdaily.github.io/a-first-cross-chain-swap-pool-depth-versus-withdrawal/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">A First Cross-Chain Swap: Pool Depth Versus Withdrawal</h1>
+<p class="s09d4746">A first THORChain swap uses two RUNE-linked pools, while a withdrawal returns an LP share; pool depth, slippage and chain fees shape the practical choice.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-17T07:05:11+00:00">Oct 17, 2026 · 07:05 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/a-first-cross-chain-swap-pool-depth-versus-withdrawal.jpg" alt="A First Cross-Chain Swap: Pool Depth Versus Withdrawal" width="1200" height="630">    <div class="sf9a9063"><p>A first cross-chain swap trades one supported asset for another through THORChain’s liquidity pools; it does not withdraw someone else’s pool share. That distinction matters because pool depth sets the trade’s price impact, while a withdrawal returns an existing liquidity provider’s portion of a pool. THORChain’s documentation describes each supported asset as paired with RUNE, the asset that links pools together. A swap from BTC to ETH therefore passes through the BTC:RUNE and RUNE:ETH pools, even though the user submits one swap request and does not need to handle RUNE.</p>
+
+<h2>How does a THORChain cross-chain swap work?</h2>
+<p>A cross-chain swap sends the input asset to a THORChain vault, where the network processes it through the relevant pools and arranges an outbound transfer of the requested asset. The Swappers documentation describes the two-pool route: the input asset is swapped to RUNE, then RUNE is swapped to the destination asset. The network’s nodes observe the inbound transaction and sign outbound transactions through its vault system, according to THORChain’s documentation on Bifrost, TSS and vaults.</p>
+<p>For a first swap, the practical sequence is to choose an input asset and destination, connect a compatible wallet, and review the route, estimated output, fees and slippage before confirming. THORChain’s usage guide notes that a token on a smart-contract chain may require a separate approval before the swap itself. The fuller comparison of swap and bridge routes is covered in <a href="https://cryptoposts.github.io/thor-swap-or-bridge-and-trade-which-route-fits/" rel="noopener">thor swap</a>; here, the key point is that a swap uses pool liquidity, while a bridge route moves assets between networks under a different mechanism.</p>
+
+<h2>What does pool depth mean for swap capacity?</h2>
+<p>Pool depth is the amount of each asset available in a pool, and it influences how much a swap moves the pool’s price. THORChain’s Continuous Liquidity Pool documentation describes a slip-based fee: larger trades relative to pool balances create more price impact and incur a larger liquidity fee. A route between two non-RUNE assets touches two pools, so the size and balance of both pools affect the result.</p>
+<p>“Capacity” is therefore better understood as an estimate of how much can be traded at an acceptable cost, rather than as a simple yes-or-no limit. A shallow pool can still process a trade, but the output may be less attractive because the trade shifts its balance. The displayed estimate can also change before execution as pool balances and network fees move. THORChain’s Swap documentation lists both price slippage and outbound fees among swap costs; the inbound transaction also requires a fee on the source chain.</p>
+<p>Before confirming, compare the quoted output with the minimum output you are willing to accept, and check that the destination address belongs to the intended chain. These are especially useful checks for a first cross-chain transaction: the source and destination assets may use different address formats, and the amount received is not simply the spot price multiplied by the input amount.</p>
+
+<h2>How is withdrawing liquidity different from swapping?</h2>
+<p>A liquidity withdrawal returns a provider’s share of a pool; it is not a way for a new swapper to claim the pool’s assets at a chosen price. THORChain’s Liquidity Providers documentation says that a provider receives their ownership percentage of the pool, including the assets earned, when withdrawing. That amount depends on the pool at withdrawal time, so it need not match the value originally deposited.</p>
+<p>Withdrawals and swaps also affect the pool differently. A swap changes the asset ratio by exchanging one side for the other, with the slip-based fee tied to trade size. A withdrawal removes the provider’s proportional share of the pool and incurs an outbound network fee, as the documentation explains. For a provider, removing liquidity can make sense when they want to end that position; for someone who simply wants one asset exchanged for another, a swap is the relevant operation.</p>
+<p>The closest alternatives answer different needs. A centralized exchange matches trades through an account-based service and may offer order-book pricing; a bridge transfers assets between networks, often through a bridge-specific design. THORChain’s pool route instead uses RUNE-linked liquidity and returns the requested native asset where supported. There is no universal winner: pool depth and fees matter for the swap, while custody model, available assets and the mechanics of the alternative matter for the other routes.</p>
+
+<h2>What should a first-time swapper watch next?</h2>
+<p>For most readers making a straightforward exchange, the swap is the direct choice; withdrawing liquidity only applies if they already own a provider position. The decision should turn on the quoted output and the route’s costs, not on the idea that a pool has a fixed amount of “capacity.” THORChain’s documents explain that fees vary with pool conditions and network gas, so the useful signals are the active status of both pools, their depth and balance, the estimated slip and fees, and the minimum output shown at confirmation.</p>
+<ul>
+<li>Check that both assets are supported and that the pools are active; THORChain’s Swappers documentation says swaps are available only after pools leave the bootstrap phase.</li>
+<li>Compare the quoted output and minimum received with the amount you expect after fees.</li>
+<li>Confirm the destination address and chain, and leave enough of the input asset for the source-chain transaction fee.</li>
+<li>After submission, follow the inbound transaction and the outbound transaction separately; they occur on different chains.</li>
+</ul>
+<p>Those signals show whether the route remains practical as liquidity and network conditions change. A first swap is simplest when the user treats the quote as a pool-based execution estimate, understands that a withdrawal is a separate liquidity-provider action, and checks both legs of the cross-chain transfer.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/four-checks-for-unused-assets-after-a-partial-crypto-swap/">Four checks for unused assets after a partial crypto swap</a></li><li class="s3d62fab"><a href="/depositing-monero-to-an-erc-20-exchange-takes-two-steps/">Depositing Monero to an ERC-20 Exchange Takes Two Steps</a></li><li class="s3d62fab"><a href="/why-bridges-deduct-gas-from-the-tokens-you-receive/">Why bridges deduct gas from the tokens you receive</a></li><li class="s3d62fab"><a href="/why-destination-chain-gas-can-reduce-your-crypto-transfer/">Why Destination-Chain Gas Can Reduce Your Crypto Transfer</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
