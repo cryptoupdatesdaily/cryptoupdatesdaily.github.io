@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unused assets after a partial crypto swap: 4 checks</title>
+<meta name="description" content="A partial fill can leave source tokens waiting or due for refund; check the swap status, asset, transaction records and fees before acting on the remainder.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Four checks for unused assets after a partial crypto swap">
+<meta property="og:description" content="A partial fill can leave source tokens waiting or due for refund; check the swap status, asset, transaction records and fees before acting on the remainder.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/four-checks-for-unused-assets-after-a-partial-crypto-swap-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Four checks for unused assets after a partial crypto swap"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Four checks for unused assets after a partial crypto swap">
+<meta name="twitter:description" content="A partial fill can leave source tokens waiting or due for refund; check the swap status, asset, transaction records and fees before acting on the remainder.">
+<meta property="article:published_time" content="2026-10-17T05:20:10+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/",
+      "name": "Unused assets after a partial crypto swap: 4 checks",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/#article",
+      "headline": "Four checks for unused assets after a partial crypto swap",
+      "isAccessibleForFree": true,
+      "description": "A partial fill can leave source tokens waiting or due for refund; check the swap status, asset, transaction records and fees before acting on the remainder.",
+      "datePublished": "2026-10-17T05:20:10+00:00",
+      "dateModified": "2026-10-17T05:20:10+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 836,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/four-checks-for-unused-assets-after-a-partial-crypto-swap-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/four-checks-for-unused-assets-after-a-partial-crypto-swap-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/four-checks-for-unused-assets-after-a-partial-crypto-swap-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Four checks for unused assets after a partial crypto swap",
+          "item": "https://cryptoupdatesdaily.github.io/four-checks-for-unused-assets-after-a-partial-crypto-swap/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Four checks for unused assets after a partial crypto swap</h1>
+<p class="s09d4746">A partial fill can leave source tokens waiting or due for refund; check the swap status, asset, transaction records and fees before acting on the remainder.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-10-17T05:20:10+00:00">Oct 17, 2026 · 05:20 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/four-checks-for-unused-assets-after-a-partial-crypto-swap.jpg" alt="Four checks for unused assets after a partial crypto swap" width="1200" height="630">    <div class="sf9a9063"><p>After a partial fill, check whether the swap is still running, identify which asset remains, trace any refund, and compare the returned amount with the fees paid. On THORChain, a streaming swap can execute in smaller sub-swaps; if its price condition is not met for some attempts, those portions may remain unswapped while others succeed. The network sends the successful output and refunds the remaining source asset when the stream’s attempts are over, according to THORChain’s streaming swap documentation. That means “part-filled” can describe progress, not a failed transaction or a lost balance.</p>
+
+<p>This differs from a single swap, which attempts execution as one trade, and from an order-book venue where the order record may show a partial match and a separately cancellable remainder. THORChain’s pool-based route uses liquidity pools and may use streaming to split the trade; the price target can leave some input unexecuted. The interface is only one view of that process. A fuller walkthrough of wallet-side steps is available in this <a href="https://cryptoworldnews.github.io/how-to-use-thor-swap-from-your-own-wallet/" rel="noopener">thor swap</a> guide; the checks below focus on reconciling what happened after a partial fill.</p>
+
+<h2>Is the swap still executing or finished?</h2>
+
+<p>First, establish whether the stream has completed before treating the unused input as available to spend. A streaming swap is made of successive attempts, so a screen showing some output does not by itself establish that all attempts have ended. THORChain’s developer guide says the network tracks the successful and failed portions across the attempts, then sends output and refunds the unexecuted source amount after the attempts are made.</p>
+
+<p>Look for a terminal status in the wallet or interface, and compare it with the transaction activity visible for the source chain and destination chain. A pending or incomplete status calls for waiting and checking again; submitting a second swap with the apparent remainder could duplicate the trade if the original stream is still active. If the interface does not make completion clear, use the transaction identifiers it provides to inspect the associated activity before taking further action. A displayed fill percentage is useful context, but completion status is the decision point.</p>
+
+<h2>Which asset is the unused balance in?</h2>
+
+<p>Check the token and chain of the remainder before deciding what to do with it. In a streaming swap with a price limit, unsuccessful sub-swaps leave input in the source asset for refund; successful sub-swaps produce the requested output asset. The two balances can appear side by side in an interface, but they are not interchangeable: one is the result of completed trades, the other is input that did not trade.</p>
+
+<p>Record the source asset, destination asset, amounts sent and received, and the wallet addresses involved. Compare the asset symbols and chain labels, not only the approximate dollar value. THORChain’s documentation describes a cross-asset swap as moving through connected pools, while the user sees a single swap; the destination amount therefore should not be mistaken for a return of the original input. For a partial stream, reconcile the output and remaining source separately.</p>
+
+<h2>Can you trace a refund and explain the difference?</h2>
+
+<p>Use the transaction history to determine whether the unfilled source amount has actually returned to the expected wallet. A refund is a separate event to verify, not an assumption based on a smaller-than-expected output. THORChain’s swap guide says the protocol returns a refunded inbound swap to the original sender by default; check the source-chain record and receiving address against the transaction details shown by the wallet or swap interface.</p>
+
+<p>Then account for fees before concluding that the refund is short. The amount received may differ from the amount originally sent because the swap process involves network transactions and outbound costs; the exact treatment depends on the route and asset. Compare like with like: source amount sent against source amount returned, and destination amount received against the completed portion. Keep the relevant transaction identifiers and timestamps together. If the status is complete but the refund is not visible, those records give support or an explorer a concrete starting point.</p>
+
+<h2>What should you check before using the remainder?</h2>
+
+<p>Once the stream is complete and the source-asset return is visible, reconcile the four checks before spending or resubmitting anything:</p>
+
+<ul>
+<li><strong>Status:</strong> Is the stream complete, or are more sub-swaps still pending?</li>
+<li><strong>Asset:</strong> Is the remainder the original source token on the expected chain?</li>
+<li><strong>Record:</strong> Does a refund transaction show the amount going to the expected address?</li>
+<li><strong>Fees:</strong> Can the gap between sent and returned amounts be explained by the transaction and outbound costs shown?</li>
+</ul>
+
+<p>If all four line up, the remainder is an unfilled balance rather than evidence that the successful portion failed. If one does not, pause before creating another swap and resolve the missing status or transaction detail first. The practical trade-off is straightforward: streaming can seek a price condition across multiple attempts, but it may leave input untraded and require a refund reconciliation. Watch the final stream status, the source-chain refund record, and the net amounts after fees; those signals distinguish a completed partial fill from one still in progress.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/depositing-monero-to-an-erc-20-exchange-takes-two-steps/">Depositing Monero to an ERC-20 Exchange Takes Two Steps</a></li><li class="s3d62fab"><a href="/why-bridges-deduct-gas-from-the-tokens-you-receive/">Why bridges deduct gas from the tokens you receive</a></li><li class="s3d62fab"><a href="/why-destination-chain-gas-can-reduce-your-crypto-transfer/">Why Destination-Chain Gas Can Reduce Your Crypto Transfer</a></li><li class="s3d62fab"><a href="/why-cross-chain-swap-minimums-need-a-treasury-policy/">Why Cross-Chain Swap Minimums Need a Treasury Policy</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
