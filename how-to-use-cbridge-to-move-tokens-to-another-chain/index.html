@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use cBridge to move tokens safely | Blockchain Today</title>
+<meta name="description" content="How to use cBridge: connect a wallet, choose chains and token, approve and send, then confirm the destination balance. Keep gas ready and test small first.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Use cBridge to Move Tokens to Another Chain">
+<meta property="og:description" content="How to use cBridge: connect a wallet, choose chains and token, approve and send, then confirm the destination balance. Keep gas ready and test small first.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/how-to-use-cbridge-to-move-tokens-to-another-chain-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Use cBridge to Move Tokens to Another Chain"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Use cBridge to Move Tokens to Another Chain">
+<meta name="twitter:description" content="How to use cBridge: connect a wallet, choose chains and token, approve and send, then confirm the destination balance. Keep gas ready and test small first.">
+<meta property="article:published_time" content="2026-11-16T23:33:00+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/",
+      "name": "How to use cBridge to move tokens safely | Blockchain Today",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/#article",
+      "headline": "How to Use cBridge to Move Tokens to Another Chain",
+      "isAccessibleForFree": true,
+      "description": "How to use cBridge: connect a wallet, choose chains and token, approve and send, then confirm the destination balance. Keep gas ready and test small first.",
+      "datePublished": "2026-11-16T23:33:00+00:00",
+      "dateModified": "2026-11-16T23:33:00+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 887,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/how-to-use-cbridge-to-move-tokens-to-another-chain-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/how-to-use-cbridge-to-move-tokens-to-another-chain-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/how-to-use-cbridge-to-move-tokens-to-another-chain-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Use cBridge to Move Tokens to Another Chain",
+          "item": "https://cryptoupdatesdaily.github.io/how-to-use-cbridge-to-move-tokens-to-another-chain/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">How to Use cBridge to Move Tokens to Another Chain</h1>
+<p class="s09d4746">How to use cBridge: connect a wallet, choose chains and token, approve and send, then confirm the destination balance. Keep gas ready and test small first.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-11-16T23:33:00+00:00">Nov 16, 2026 · 23:33 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/how-to-use-cbridge-to-move-tokens-to-another-chain.jpg" alt="How to Use cBridge to Move Tokens to Another Chain" width="1200" height="630">    <div class="sf9a9063"><p>To use cBridge to move tokens to another chain, connect your wallet, choose the source and destination, approve and send, then confirm the balance in the destination wallet. Open <a href="https://cbridge.finance" rel="noopener">cBridge</a> to start a transfer of supported assets between networks with the Celer bridge. The app handles routing; you choose the transfer details and approve the transactions with your wallet.</p>
+<h2>What should you prepare before using cBridge?</h2>
+<p>Before using the Celer bridge, have a wallet such as MetaMask, tokens on the source chain, native gas for that chain, and a token supported on both chains. The destination wallet must be available to receive the transfer. These basics matter because a bridge transfer needs both a supported route and a way to pay for the source-chain transaction.</p>
+<ul>
+<li>Keep the source chain’s native coin for gas, such as ETH when sending from Ethereum; without it, you cannot submit the transaction.</li>
+<li>Keep some native gas coin on the destination chain too, so you can use or move the tokens after they arrive.</li>
+<li>Confirm that the token is supported on both selected chains; a token with the same name may have different contract addresses on different networks.</li>
+<li>Use the wallet address you intend to receive funds at, and make sure the wallet can connect to the destination network.</li>
+</ul>
+<p>Bridging can involve pooled liquidity or token mappings to make supported assets available across networks. That is different from simply changing the network displayed in MetaMask: the transfer has to be completed so the destination wallet can hold the asset on the other chain.</p>
+<p>Send a small test amount first if you have not used the route before. That lets you confirm that the destination wallet and token display are right before transferring more. The trade-off is an extra transaction, including its gas cost, but it gives you a concrete check that the route worked as expected.</p>
+<h2>How do you choose and send the transfer?</h2>
+<p>In the cBridge app, connect your wallet, select the source and destination chains, choose the token and amount, then review the quote before signing. The available amount received, fees, and estimated time can change with the route and transfer conditions, so use the values shown for your transfer rather than assuming they will match a previous one.</p>
+<ol>
+<li>Select the source chain where your tokens currently sit and the destination chain where you want to use them. Names such as Arbitrum, Optimism, BNB Chain, and Polygon are distinct networks; select the intended destination carefully.</li>
+<li>Choose the token and amount. Review the amount expected to arrive, the fees, and estimated time. Check the destination network and wallet address before proceeding.</li>
+<li>Set slippage using the app’s available guidance. Slippage that is set too low can cause a transfer to fail; a failed transfer may require a refund request, so read the status and instructions rather than repeating the send.</li>
+<li>Approve the token if prompted, then confirm the transfer. For an ERC-20 token, the first send may require a separate approval transaction that authorizes the app to use the specified token.</li>
+<li>Keep the source transaction hash and watch the transfer status in history while it completes.</li>
+</ol>
+<p>Wallet signatures are the key control point: an approval authorizes token use, and the send confirms the transfer. Read each wallet prompt and verify its chain and transaction details before signing. Once submitted, the app routes the transfer, while your wallet remains the place to check the source transaction and destination balance.</p>
+<h2>How do you confirm arrival and handle a missing balance?</h2>
+<p>The transfer is complete for your task when the destination wallet shows the received amount on the destination chain. Check the transfer status in history and then view the wallet on the selected destination network. A token balance may not appear automatically if the wallet does not yet display that token.</p>
+<p>If the transfer status indicates completion but the balance is missing, import the destination token’s contract address into the wallet. Use the contract for that token on the destination chain; the source-chain address may be different. After importing, the wallet can display the arriving balance. This is a wallet display step, not another bridge send.</p>
+<p>If the transfer is still pending, use its status and transaction hash to follow what happened before taking another action. If it failed because slippage was too low, follow the refund request process indicated for the transfer. Do not assume that submitting a second transfer will recover the first one.</p>
+<h2>Questions people ask after a cBridge transfer</h2>
+<h3>How long does a cBridge transfer take?</h3>
+<p>Transfer time depends on the route and current conditions. Review the estimate shown before sending, then follow the status in history; the estimate is not a guarantee of arrival time.</p>
+<h3>Can I cancel a cBridge transfer?</h3>
+<p>Do not assume a submitted transfer can be cancelled. Check its current status and the available instructions in the app. If it failed, a refund request may be needed.</p>
+<h3>What is the minimum amount on cBridge?</h3>
+<p>The minimum can vary by token and route. Review the amount accepted for the selected transfer in the app before confirming; there is no single minimum to assume across every route.</p>
+<h3>Can I bridge NFTs with cBridge?</h3>
+<p>This guide covers supported token transfers. Do not assume an NFT is supported; confirm that the specific asset and route are available before attempting a transfer.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/us-wins-authority-to-seize-1-2bn-in-binance-hack-funds/">US wins authority to seize $1.2bn in Binance hack funds</a></li><li class="s3d62fab"><a href="/us-courts-authorize-action-on-1-2bn-in-binance-hack-funds/">US courts authorize action on $1.2bn in Binance hack funds</a></li><li class="s3d62fab"><a href="/us-secures-court-authority-over-1-2bn-in-binance-theft/">US secures court authority over $1.2bn in Binance theft</a></li><li class="s3d62fab"><a href="/us-secures-authority-over-1-2-billion-in-binance-theft/">US secures authority over $1.2 billion in Binance theft</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
