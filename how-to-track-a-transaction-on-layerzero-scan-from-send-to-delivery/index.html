@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Track a Transaction on LayerZero Scan: Follow Both Hashes</title>
+<meta name="description" content="Track a transaction on LayerZero Scan by searching its source hash or sender address, then follow the message status and destination hash to delivery.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Track a Transaction on LayerZero Scan from Send to Delivery">
+<meta property="og:description" content="Track a transaction on LayerZero Scan by searching its source hash or sender address, then follow the message status and destination hash to delivery.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Track a Transaction on LayerZero Scan from Send to Delivery"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Track a Transaction on LayerZero Scan from Send to Delivery">
+<meta name="twitter:description" content="Track a transaction on LayerZero Scan by searching its source hash or sender address, then follow the message status and destination hash to delivery.">
+<meta property="article:published_time" content="2026-11-19T17:31:01+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/",
+      "name": "How to Track a Transaction on LayerZero Scan: Follow Both Hashes",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/#article",
+      "headline": "How to Track a Transaction on LayerZero Scan from Send to Delivery",
+      "isAccessibleForFree": true,
+      "description": "Track a transaction on LayerZero Scan by searching its source hash or sender address, then follow the message status and destination hash to delivery.",
+      "datePublished": "2026-11-19T17:31:01+00:00",
+      "dateModified": "2026-11-19T17:31:01+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 736,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Track a Transaction on LayerZero Scan from Send to Delivery",
+          "item": "https://cryptoupdatesdaily.github.io/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">How to Track a Transaction on LayerZero Scan from Send to Delivery</h1>
+<p class="s09d4746">Track a transaction on LayerZero Scan by searching its source hash or sender address, then follow the message status and destination hash to delivery.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-11-19T17:31:01+00:00">Nov 19, 2026 · 17:31 UTC</time><span>4 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/how-to-track-a-transaction-on-layerzero-scan-from-send-to-delivery.jpg" alt="How to Track a Transaction on LayerZero Scan from Send to Delivery" width="1200" height="630">    <div class="sf9a9063"><p>LayerZero Scan tracks a cross-chain transaction by linking its source transaction to a message status and, once delivered, a destination transaction hash.</p>
+<p>Start with a transfer that has already been sent and the source transaction hash or sender’s wallet address. LayerZero Scan indexes messages sent through LayerZero endpoints, so one search can show the progress of a transfer across chains. This gives you a view of the message as a whole; a chain explorer shows transactions on its own chain.</p>
+<ol>
+<li>
+<h2>What should you search when you open LayerZero Scan?</h2>
+<p>Open layerzeroscan.com and paste the source-chain transaction hash into the search box. Open the matching message to see its status and the chains involved.</p>
+<p>Lost the hash? Search for the sender’s wallet address instead. LayerZero Scan lists every LayerZero message that address sent across chains, which can help you find a transfer without retracing wallet activity one transaction at a time. For a transfer made through the <a href="https://www.tumblr.com/atomicgladiatoraltar/833550292509425664/how-do-consensus-designs-reach-finality" rel="noopener">Berachain bridge</a>, keep the sending wallet address or source hash handy before you start; either gives you a way into the message record.</p>
+<p>An address search can return more than one message, especially when that wallet has sent transfers on multiple chains. Match the source chain and the transfer you recognize before opening a result. The address narrows the search to messages sent by that wallet, while the source hash points to one specific source transaction.</p>
+</li>
+<li>
+<h2>How do you identify the right message?</h2>
+<p>Read the source chain and source transaction hash on the message to confirm that the result matches the transfer you sent. The source hash is the transaction on the chain where the transfer began; it is not the hash for the transaction that may later execute on the destination chain.</p>
+<p>This distinction matters because a cross-chain transfer appears as a LayerZero message connecting activity on two chains. A search result can help locate the message, but checking its source chain and hash is the way to tie it back to the transaction you intended to follow.</p>
+<p>Once you have the matching message open, use its status as the next signal. The status describes where the message stands in the cross-chain process, while the hashes identify the on-chain transactions associated with it.</p>
+</li>
+<li>
+<h2>What do Inflight, Delivered and Failed mean?</h2>
+<p><strong>Inflight</strong> means verification or delivery is still running. The message has not yet reached a completed delivery state, so return to its record later to see whether the status has changed.</p>
+<p><strong>Delivered</strong> means the message executed on the destination chain. This is the status to look for when you want to confirm that the cross-chain transfer reached the stage of execution on its receiving chain.</p>
+<p><strong>Failed</strong> means execution reverted on the destination chain. The status distinguishes that outcome from a message still in progress. This article’s task is to read the status and follow the hashes; the status itself tells you whether the message is still moving, executed, or reverted.</p>
+<p>These labels make the message view useful between the send and the destination transaction. A source-chain explorer can confirm the original transaction, but it does not present the LayerZero message’s cross-chain status in the same record. LayerZero Scan brings those pieces together for the transfer.</p>
+</li>
+<li>
+<h2>How do you follow a delivered message to its destination?</h2>
+<p>Read the destination chain and look for its transaction hash after the status changes to Delivered. Each message shows a source transaction hash, and once delivered it also shows a destination transaction hash. Click the destination hash to open that transaction in the destination chain’s explorer.</p>
+<p>For a Berachain bridge transfer sent from Ethereum, the source hash is on Ethereum. Once the message is delivered, its Berachain destination hash links to Berascan. The two hashes refer to separate chain transactions connected by the message, so use the destination hash when checking the receiving side.</p>
+<p>The final check is that the message says Delivered, names the destination chain you expected, and shows a destination hash that opens on that chain’s explorer. For the Ethereum-to-Berachain case, that means seeing the Ethereum source record and following the Berachain hash to Berascan. Together, the status and destination transaction show where the transfer went after it left its source chain.</p>
+</li>
+</ol>
+<ul>
+<li>Open layerzeroscan.com.</li>
+<li>Search the source hash, or the sender address if the hash is lost.</li>
+<li>Open the matching message and read its status and both chains.</li>
+<li>When it says Delivered, open the destination hash in the destination explorer.</li>
+</ul></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/how-to-go-from-wallet-setup-to-a-filled-order/">How to Go From Wallet Setup to a Filled Order</a></li><li class="s3d62fab"><a href="/why-did-i-pay-gas-twice-bridging-an-erc-20/">Why Did I Pay Gas Twice Bridging an ERC-20?</a></li><li class="s3d62fab"><a href="/why-does-a-token-price-fall-with-liquidity-locked/">Why Does a Token Price Fall With Liquidity Locked?</a></li><li class="s3d62fab"><a href="/doj-wins-authority-over-1-2-billion-in-binance-theft/">DOJ wins authority over $1.2 billion in Binance theft</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
