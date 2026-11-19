@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Pay Gas Twice Bridging an ERC-20? Approval Explained</title>
+<meta name="description" content="Why did I pay gas twice when bridging an ERC-20 token? One charge may approve spending; the next deposits tokens, with each transaction using ETH for gas.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why Did I Pay Gas Twice Bridging an ERC-20?">
+<meta property="og:description" content="Why did I pay gas twice when bridging an ERC-20 token? One charge may approve spending; the next deposits tokens, with each transaction using ETH for gas.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/why-did-i-pay-gas-twice-bridging-an-erc-20-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why Did I Pay Gas Twice Bridging an ERC-20?"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Did I Pay Gas Twice Bridging an ERC-20?">
+<meta name="twitter:description" content="Why did I pay gas twice when bridging an ERC-20 token? One charge may approve spending; the next deposits tokens, with each transaction using ETH for gas.">
+<meta property="article:published_time" content="2026-11-19T04:42:22+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/",
+      "name": "Why Pay Gas Twice Bridging an ERC-20? Approval Explained",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/#article",
+      "headline": "Why Did I Pay Gas Twice Bridging an ERC-20?",
+      "isAccessibleForFree": true,
+      "description": "Why did I pay gas twice when bridging an ERC-20 token? One charge may approve spending; the next deposits tokens, with each transaction using ETH for gas.",
+      "datePublished": "2026-11-19T04:42:22+00:00",
+      "dateModified": "2026-11-19T04:42:22+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 759,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/why-did-i-pay-gas-twice-bridging-an-erc-20-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/why-did-i-pay-gas-twice-bridging-an-erc-20-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/why-did-i-pay-gas-twice-bridging-an-erc-20-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why Did I Pay Gas Twice Bridging an ERC-20?",
+          "item": "https://cryptoupdatesdaily.github.io/why-did-i-pay-gas-twice-bridging-an-erc-20/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Why Did I Pay Gas Twice Bridging an ERC-20?</h1>
+<p class="s09d4746">Why did I pay gas twice when bridging an ERC-20 token? One charge may approve spending; the next deposits tokens, with each transaction using ETH for gas.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-11-19T04:42:22+00:00">Nov 19, 2026 · 04:42 UTC</time><span>4 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/why-did-i-pay-gas-twice-bridging-an-erc-20.jpg" alt="Why Did I Pay Gas Twice Bridging an ERC-20?" width="1200" height="630">    <div class="sf9a9063"><p>An ERC-20 bridge deposit usually costs gas twice because one Ethereum transaction approves token spending and a second submits the deposit; an existing sufficient allowance can remove the first transaction.</p>
+<p>The two charges pay for separate contract operations, not two versions of the same transfer. Ethereum gas is paid in ETH for transaction execution, so both the approval and the deposit can have their own gas charge. <a href="https://ethereum.org/developers/docs/gas/" rel="nofollow noopener">Ethereum’s gas documentation</a> explains how gas pays for work on the network.</p>
+<h2>Approval and deposit are separate transactions</h2>
+<p>An approval gives a particular spender permission to use some of your tokens. The deposit then calls the bridge operation that takes those tokens into custody. The ERC-20 standard defines <code>approve</code>, which sets the allowance, and <code>transferFrom</code>, which lets an authorized spender move tokens on your behalf. <a href="https://eips.ethereum.org/EIPS/eip-20" rel="nofollow noopener">The ERC-20 standard</a> describes both operations.</p>
+<p>For a WETH transfer through Suibridge, the first transaction can approve the bridge spender to use WETH. After that transaction succeeds, a second transaction submits the bridge deposit. Each execution changes contract state on Ethereum and uses gas; the approval charge is for authorization, while the deposit charge is for carrying out the token transfer into bridge custody.</p>
+<p>That permission step is separate from <a href="https://keyvault-8fz.pages.dev/what-happens-to-my-eth-on-suibridge-follow-the-backing/" rel="noopener">how Suibridge holds ETH</a>, the subject of a related article. Suibridge uses a lock-and-mint process to move supported assets from Ethereum to Sui, so understanding the custody side helps explain what happens to assets after the deposit. The allowance itself only records permission for a spender to use tokens under the token contract’s rules.</p>
+<h2>A sufficient allowance can avoid another approval</h2>
+<p>An allowance is the amount a spender is still permitted to withdraw from an owner’s balance. It belongs to the owner–spender pair recorded by that token contract. The ERC-20 standard’s <code>allowance</code> function returns the remaining amount, and a later <code>approve</code> call sets the allowance value for that spender.</p>
+<p>Take a user who approves a bridge spender to use 40 WETH, then deposits 10 WETH. If the token contract still records at least the needed amount for that same owner and spender, the user may be able to deposit again without sending a new approval transaction. That saves the approval execution and its gas; the new deposit still requires its own transaction.</p>
+<p>The amount matters. If the remaining allowance is below the amount the deposit needs, another approval may be required. Some users approve only what they expect to spend, which limits the permission granted but can mean repeating the approval for a later deposit. Others set a larger allowance to reuse it, which can avoid repeat approval transactions while leaving a broader permission in place.</p>
+<h2>A different spender can mean a fresh approval</h2>
+<p>A sufficient allowance for one spender does not automatically authorize another. If a bridge deposit uses a different spender address, the old allowance may not cover it, even when the token and wallet are unchanged. A change in spender therefore can bring back the approval transaction and its gas charge.</p>
+<p>This is why an approval that worked for an earlier bridge interaction may not apply to a later one. The token contract tracks authorization for each owner–spender pair, rather than one universal permission for all bridges. Before approving again, the useful detail to compare is the spender named in the approval request with the one already associated with the existing allowance.</p>
+<p>Some permit-based flows handle authorization differently, so they may not require the same standalone on-chain approval transaction. The exact flow depends on the token and the bridge’s implementation; the basic two-transaction explanation applies when the user submits a regular ERC-20 approval followed by a deposit transaction.</p>
+<p>Before confirming, identify whether the pending transaction is an approval or a deposit, and check whether the allowance covers the intended amount for that spender. Those details explain the two charges and indicate whether a later deposit may need another approval.</p>
+<h2>Questions readers ask</h2>
+<h3>What spending limit should I approve?</h3>
+<p>Approve an amount that matches your comfort with the spender’s permission. A smaller allowance limits how much that spender can use but may require another approval later; a larger allowance can be reused while enough remains. The ERC-20 standard defines approval as a spender’s permission up to the approved value.</p>
+<h3>How can I revoke an unused approval?</h3>
+<p>Use a wallet or token-approval tool that lets you submit a new allowance for the same token and spender, commonly setting it to zero. That update is an on-chain transaction and uses gas. The ERC-20 standard says a new <code>approve</code> call overwrites the existing allowance value.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/why-does-a-token-price-fall-with-liquidity-locked/">Why Does a Token Price Fall With Liquidity Locked?</a></li><li class="s3d62fab"><a href="/doj-wins-authority-over-1-2-billion-in-binance-theft/">DOJ wins authority over $1.2 billion in Binance theft</a></li><li class="s3d62fab"><a href="/network-directory-websites-can-they-access-wallet-funds/">Network directory websites: Can they access wallet funds?</a></li><li class="s3d62fab"><a href="/how-to-trace-an-unknown-token-approval-to-its-first-grant/">How to trace an unknown token approval to its first grant</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
