@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Bridged Tokens Stay Backed on Sui: The Model</title>
+<meta name="description" content="How bridged tokens stay backed on Sui: Suibridge locks ETH as WETH on Ethereum, then mints a Sui token that can be burned to redeem the asset.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model">
+<meta property="og:description" content="How bridged tokens stay backed on Sui: Suibridge locks ETH as WETH on Ethereum, then mints a Sui token that can be burned to redeem the asset.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/bridged-tokens-on-sui-suibridges-lock-and-mint-model-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model">
+<meta name="twitter:description" content="How bridged tokens stay backed on Sui: Suibridge locks ETH as WETH on Ethereum, then mints a Sui token that can be burned to redeem the asset.">
+<meta property="article:published_time" content="2026-11-24T04:30:31+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/",
+      "name": "How Bridged Tokens Stay Backed on Sui: The Model",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/#article",
+      "headline": "Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model",
+      "isAccessibleForFree": true,
+      "description": "How bridged tokens stay backed on Sui: Suibridge locks ETH as WETH on Ethereum, then mints a Sui token that can be burned to redeem the asset.",
+      "datePublished": "2026-11-24T04:30:31+00:00",
+      "dateModified": "2026-11-24T04:30:31+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 869,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/bridged-tokens-on-sui-suibridges-lock-and-mint-model-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/bridged-tokens-on-sui-suibridges-lock-and-mint-model-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/bridged-tokens-on-sui-suibridges-lock-and-mint-model-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model",
+          "item": "https://cryptoupdatesdaily.github.io/bridged-tokens-on-sui-suibridges-lock-and-mint-model/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model</h1>
+<p class="s09d4746">How bridged tokens stay backed on Sui: Suibridge locks ETH as WETH on Ethereum, then mints a Sui token that can be burned to redeem the asset.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-11-24T04:30:31+00:00">Nov 24, 2026 · 04:30 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/bridged-tokens-on-sui-suibridges-lock-and-mint-model.jpg" alt="Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model" width="1200" height="630">    <div class="sf9a9063"><p>Suibridge backs a bridge-issued token on Sui by locking the corresponding supported asset on Ethereum and burning the Sui token when that asset is redeemed.</p>
+<ul>
+<li>ETH deposits are wrapped into WETH before they reach the Ethereum vault.</li>
+<li>Suibridge mints a corresponding token on Sui against the locked asset.</li>
+<li>A return transfer burns that Sui token and releases the Ethereum asset through the bridge.</li>
+</ul>
+<p>The key distinction is where the backing sits: the Sui token represents a claim tied to assets held on Ethereum, rather than a separate pool of native Sui assets. That makes the bridge’s custody and transfer controls part of the token’s backing model.</p>
+<h2>How does Suibridge keep an ETH transfer backed?</h2>
+<p>Suibridge keeps the ETH transfer tied to WETH in its Ethereum vault while the matching bridge-issued token circulates on Sui. The steps change the asset’s location and representation; the backing remains on Ethereum.</p>
+<ol>
+<li>You send ETH to the bridge on Ethereum. Suibridge wraps that ETH into WETH before it reaches the vault. If you start with WETH, it is held in the vault as WETH too.</li>
+<li>After the deposit is processed, Suibridge mints the corresponding bridge-issued token on Sui and sends it to your Sui wallet.</li>
+<li>You can then hold or use that Sui-side token in places that accept it as the bridged representation of the asset. The original ETH is not sitting in a separate Sui reserve; the backing asset is held in the Ethereum vault.</li>
+</ol>
+<p>Take a deposit of 1 ETH as a simple illustration. Before the transfer, you hold 1 ETH on Ethereum. After the bridge processes it, the vault holds the corresponding WETH and your Sui wallet holds the bridge-issued token. The token’s form and network have changed, while the Ethereum-side backing remains in custody. This illustration leaves out any transfer-specific processing details.</p>
+<p>When using a bridge, identify who issued the token and how you would return it before you move funds. For context on that choice, see <a href="https://cryptoupdatesdaily.github.io/what-is-a-canonical-bridge-on-sui-and-how-does-it-differ/">how Suibridge compares with Wormhole</a>; Suibridge is one route to Sui, and the issuer determines which bridge can process a return.</p>
+<p>The same distinction matters when comparing tokens that share an asset name or ticker. A bridge-issued WETH representation is tied to its issuing bridge’s custody and redemption path. It is not automatically interchangeable with a separately issued Sui token just because both refer to WETH. In practice, check the token’s issuer and the route that supports its redemption before treating two representations as the same asset.</p>
+<p>The model is one option for moving assets across networks. It leaves the original asset in Ethereum custody and creates a Sui-side representation; a token issued through another route may have different backing and return arrangements. Suibridge supports ETH, WETH, WBTC, LBTC, and USDT, with the same broad lock-and-mint idea applying to supported transfers. The ETH example makes the wrapping step visible: both ETH deposits and deposits that begin as WETH are held as WETH in the vault.</p>
+<h2>Can a bridged token be redeemed for the original asset?</h2>
+<p>A bridge-issued token can be redeemed through the bridge that issued it, subject to that bridge’s transfer and security controls. On the return path, the Sui-side token is burned, and the corresponding Ethereum asset is released through Suibridge.</p>
+<ol>
+<li>You request a return transfer through the issuing bridge.</li>
+<li>The bridge processes the Sui-side token for the return and burns it.</li>
+<li>The corresponding Ethereum asset is released from the vault through the bridge’s process.</li>
+</ol>
+<p>Afterward, the token that represented the deposit on Sui has been burned, and you receive the corresponding asset on Ethereum. The asset’s network changes back; the Sui token no longer remains as an outstanding representation of that deposit. This is why the issuing bridge matters: a token tied to one bridge’s vault cannot be assumed to have a return route through another issuer.</p>
+<h2>Related questions</h2>
+<h3>Why might a bridged token’s backing be at risk?</h3>
+<p>A bridged token’s backing depends on the assets remaining in custody and on the bridge correctly authorizing and accounting for transfers. The lock-and-mint design connects the Sui token to the Ethereum asset, but the connection relies on the bridge’s custody, transfer authorization, and contract controls working as intended.</p>
+<p>That creates a trade-off. You gain access to a Sui-side representation of an asset held on Ethereum, while relying on the bridge to preserve the relationship between tokens issued and assets held. A disruption in custody or in the controls that approve deposits, minting, burning, or release could put that relationship at risk. This is a general feature of the bridge model, not a claim about a particular incident.</p>
+<p>For a newcomer, the useful checks are concrete: confirm which bridge issued the token, whether it supports the return route you need, and what controls govern transfers. A familiar asset label alone does not answer those questions. The backing cycle is only as dependable as the custody and accounting that connect the Sui token to the Ethereum vault.</p>
+<p>So, before and after bridging, the asset is associated with the same Ethereum-side backing, while its usable representation changes between networks. Whether that claim holds depends on custody and authorized accounting—and that is what to keep in view when choosing a token to hold or redeem.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/sparklend-frequently-asked-questions-how-lending-works/">SparkLend Frequently Asked Questions: How Lending Works</a></li><li class="s3d62fab"><a href="/how-much-gas-to-budget-after-bridging-bitcoin-estimate-each-action/">How much gas to budget after bridging Bitcoin: estimate each action</a></li><li class="s3d62fab"><a href="/fraxswap-long-term-orders-how-the-twamm-fills-them/">Fraxswap long-term orders: how the TWAMM fills them</a></li><li class="s3d62fab"><a href="/how-to-read-an-approval-and-identify-its-spender/">How to Read an Approval and Identify Its Spender</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
