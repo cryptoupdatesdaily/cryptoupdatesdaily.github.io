@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How does UniswapX work? Inside its filler auctions</title>
+<meta name="description" content="How UniswapX works: you sign a Permit2 order whose price decays; fillers compete to execute it, pay the gas and choose a route at fill time.">
+<link rel="canonical" href="https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#eef0e2">
+<meta name="author" content="Blockchain Today Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Blockchain Today">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="UniswapX’s Dutch-auction order flow">
+<meta property="og:description" content="How UniswapX works: you sign a Permit2 order whose price decays; fillers compete to execute it, pay the gas and choose a route at fill time.">
+<meta property="og:url" content="https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/">
+<meta property="og:image" content="https://cryptoupdatesdaily.github.io/assets/covers/uniswapxs-dutch-auction-order-flow-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UniswapX’s Dutch-auction order flow"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UniswapX’s Dutch-auction order flow">
+<meta name="twitter:description" content="How UniswapX works: you sign a Permit2 order whose price decays; fillers compete to execute it, pay the gas and choose a route at fill time.">
+<meta property="article:published_time" content="2026-11-25T04:48:37+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/s44e7e55832.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blockchain Today" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoupdatesdaily.github.io/#org",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoupdatesdaily.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoupdatesdaily.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoupdatesdaily.github.io/#website",
+      "name": "Blockchain Today",
+      "url": "https://cryptoupdatesdaily.github.io/",
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Blockchain Today reports crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and network upgrades, with analysis of what changed."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/#webpage",
+      "url": "https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/",
+      "name": "How does UniswapX work? Inside its filler auctions",
+      "isPartOf": {
+        "@id": "https://cryptoupdatesdaily.github.io/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/#article",
+      "headline": "UniswapX’s Dutch-auction order flow",
+      "isAccessibleForFree": true,
+      "description": "How UniswapX works: you sign a Permit2 order whose price decays; fillers compete to execute it, pay the gas and choose a route at fill time.",
+      "datePublished": "2026-11-25T04:48:37+00:00",
+      "dateModified": "2026-11-25T04:48:37+00:00",
+      "url": "https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoupdatesdaily.github.io/#org"
+      },
+      "wordCount": 854,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/uniswapxs-dutch-auction-order-flow-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/uniswapxs-dutch-auction-order-flow-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoupdatesdaily.github.io/assets/covers/uniswapxs-dutch-auction-order-flow-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoupdatesdaily.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "UniswapX’s Dutch-auction order flow",
+          "item": "https://cryptoupdatesdaily.github.io/uniswapxs-dutch-auction-order-flow/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s31a6c7f" href="#main">Skip to main content</a>
+<header class="s19292dd">
+  <div class="se14e8d7 s07b4e6b">
+    <a class="scccb3e6" href="/">Blockchain Today</a>
+    <p class="s647ee2f">Crypto markets, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<div class="se14e8d7 s74294bb">
+  <article class="s379105e s107e6ac">
+    <header class="sc6029c8">
+      <h1 class="sa53cb78">UniswapX’s Dutch-auction order flow</h1>
+<p class="s09d4746">How UniswapX works: you sign a Permit2 order whose price decays; fillers compete to execute it, pay the gas and choose a route at fill time.</p>      <p class="s65e8bee"><span>By Blockchain Today Editorial</span><time datetime="2026-11-25T04:48:37+00:00">Nov 25, 2026 · 04:48 UTC</time><span>5 min read</span></p>
+    </header>
+<img fetchpriority="high" class="s4b290c8 se05b9c5" src="/assets/covers/uniswapxs-dutch-auction-order-flow.jpg" alt="UniswapX’s Dutch-auction order flow" width="1200" height="630">    <div class="sf9a9063"><p>UniswapX works by having a trader sign an off-chain order with a decaying price, then letting competing fillers execute it when they can make the trade work. The filler submits the on-chain transaction and pays its gas, while choosing a route at fill time.</p>
+<p>Launched on Ethereum mainnet in 2023, UniswapX changes where a swap’s execution decision happens. In a conventional Uniswap swap, the trader submits a transaction with a route and minimum output; with UniswapX, the trader signs an intent and a filler finds a way to execute it. For a different execution model, cowswap groups signed intents in batch auctions; background on the <a href="https://telegra.ph/How-to-Swap-on-cowswap-vs-Uniswap-First-Trade-Steps-11-23" rel="noopener">CoW token</a> adds context on the wider CoW ecosystem around that alternative.</p>
+<h2>How does a UniswapX order move from signature to fill?</h2>
+<p>A UniswapX order starts as a signed Dutch order that specifies the tokens, amounts, price bounds and expiry. Permit2 provides the signature-based authorization for token transfer, and the UniswapX reactor checks the order’s conditions when a filler submits it. As the UniswapX whitepaper explains, fillers can source liquidity from on-chain venues or other sources, then settle the order on-chain.</p>
+<p>The price moves over time from the order’s start price toward its minimum acceptable output (or maximum input). This decay makes the order a competition among fillers: an early fill may leave more value for the trader, while a later fill offers a filler more room to cover costs and earn a margin.</p>
+<ul>
+<li><strong>Signed order:</strong> The trader authorizes the exact trade parameters with Permit2, rather than submitting the swap transaction personally.</li>
+<li><strong>Exclusive window:</strong> One quoting filler gets the first right to fill during a short exclusivity period. That quote sets the auction’s starting point; it does not fix the execution price.</li>
+<li><strong>Open decay:</strong> If the exclusive filler passes, the order opens to other fillers and its price continues to decay. Competition then determines whether and when someone takes it.</li>
+<li><strong>Settlement:</strong> A winning filler submits the fill to the reactor, which verifies the signed conditions. The trader receives the output tokens, and the filler pays the transaction gas.</li>
+</ul>
+<p>The exclusivity window matters because it can give the first quoter time to act on its price, but the quote is only the start of the process. If that filler does not fill, the open auction gives other fillers a chance at a progressively less demanding price. The trader’s signed minimum remains the boundary: the order cannot settle below its authorized terms. Uniswap’s documentation describes this lifecycle as exclusive quoting followed by open competition.</p>
+<h2>What does a fill look like, and when does the model help?</h2>
+<p>Take a trader selling a liquid token for ETH. They sign an order with a generous starting output and a lower minimum, then leave fillers to compete as the price decays. A filler may source ETH from an AMM, another venue or available order flow; it submits the fill only when the resulting price leaves enough room to cover gas and its margin. The trader gets ETH, and the filler handles the transaction cost.</p>
+<p>Now keep that same trade unchanged but make filler competition the deciding factor. With several active fillers watching the pair, one can accept a smaller margin to win the order, so the trader has a better chance of filling closer to the starting price. With few active fillers on that same pair, there is less pressure to improve the offer; the order may fill later at a worse point in its decay or fall back to classic routing. This is why the model is strongest on liquid pairs with active fillers.</p>
+<p>UniswapX’s practical gains are gas paid by the filler, failed fills that cost the swapper nothing, and no public mempool exposure for the signed order before submission. Route selection also shifts to fill time, which gives fillers room to seek liquidity across sources. The trade-off is that a filler’s gas and profit margin sit inside the execution price. On a thin pair, weak competition can make that embedded margin more consequential.</p>
+<p>The batch-auction alternative works differently: it matches opposing orders and settles them together at uniform prices, while UniswapX fills orders one by one. Batch settlement can suit a trader whose priority is netting with other order flow; UniswapX can suit one who values an individual order being competed for and routed at fill time. The execution model, and the amount of active competition for a particular pair, are the deciding signals to watch.</p>
+<h2>Related</h2>
+<h3>Is UniswapX safer than a normal Uniswap swap?</h3>
+<p>UniswapX changes the swap’s exposure by keeping the signed order out of the public mempool until a filler submits it, reducing the opportunity for public transaction observers to react before execution. The reactor also checks that the fill meets the signed conditions. Traders still authorize token movement through Permit2, so the scope and expiry of that signature remain important parts of the order.</p>
+<h3>What is a filler in UniswapX?</h3>
+<p>A filler is a searcher, market maker or other agent that competes to execute signed UniswapX orders. It sources liquidity, submits the winning order on-chain, pays gas, and earns whatever margin the execution price leaves after its costs.</p></div>
+  </article>
+  <aside class="see7e92e" aria-labelledby="related-head">
+    <h2 class="sf23ebae" id="related-head">Related coverage</h2>
+    <ul class="s129aec6">
+<li class="s3d62fab"><a href="/teleswap-transfers-follow-the-btc-and-the-proof/">TeleSwap transfers: follow the BTC and the proof</a></li><li class="s3d62fab"><a href="/bridged-tokens-on-sui-suibridges-lock-and-mint-model/">Bridged Tokens on Sui: Suibridge’s Lock-and-Mint Model</a></li><li class="s3d62fab"><a href="/sparklend-frequently-asked-questions-how-lending-works/">SparkLend Frequently Asked Questions: How Lending Works</a></li><li class="s3d62fab"><a href="/how-much-gas-to-budget-after-bridging-bitcoin-estimate-each-action/">How much gas to budget after bridging Bitcoin: estimate each action</a></li>    </ul>
+  </aside>
+</div>
+</main>
+
+<footer class="s5a68ed8">
+  <div class="se14e8d7 s4440258">
+    <p class="sfdf0dff">Blockchain Today</p>
+    <nav class="se7b795c" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/privacy/">Privacy &amp; terms</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s41adf71">Independent crypto coverage, for information only.</p>
+    <p class="s348afa8">© 2026 Blockchain Today</p>
+  </div>
+</footer>
+</body>
+</html>
